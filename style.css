@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='70' height='70'><text y='40' font-size='30'>🧡</text></svg>"), default;
+}
+
+p::before {
+    content: '🧡';
+    display: inline-block;
+    transition: all 0.7s ease;
+}
+
+p:hover::before {
+    transform: rotate(360deg);
+}
+
+p {
+    border: 2px solid orange;
+    border-radius: 100px;
+    box-shadow: 0 8px 16px #ffa60080;
+    padding: 16px 96px;
+
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    
+    background-color: white;
+    color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: rgb(20, 20, 20);
+        color: white;
+    }
+
+    p {
+        background-color: rgb(20, 20, 20);
+        color: white;
+    }
+}
